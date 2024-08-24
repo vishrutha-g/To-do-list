@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button type="submit" class="add-task-btn">+</button>
+        </form>
+        <div class="task-filters">
+            <button id="filter-all" class="filter-btn">All</button>
+            <button id="filter-complete" class="filter-btn">Complete</button>
+            <button id="filter-incomplete" class="filter-btn">Incomplete</button>
+            <button class="delete-all-btn">Delete All</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Edit Task</h2>
+            <form id="edit-form">
+                <input type="text" id="edit-input">
+                <button type="submit" class="save-btn">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

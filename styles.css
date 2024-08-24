@@ -1,0 +1,194 @@
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://i.pinimg.com/736x/e0/15/5b/e0155bd1736acf6d216b7d7fccda7c06.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 530px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#task-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.add-task-btn {
+    padding: 10px;
+    border: none;
+    background: #2b87ab;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-btn, .delete-all-btn {
+    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: rgb(12, 10, 10);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0 5px;
+}
+
+.filter-btn:hover, .delete-all-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(238, 48, 114);
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: hwb(210 9% 14% / 0.369);
+}
+
+.task button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.task button.complete {
+    color: #be4e4e;
+}
+
+.task button.delete {
+    color: #65090f;
+}
+
+.task button.edit {
+    color: #eeb4d1;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #7b1fa2;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    color: white;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.save-btn {
+    padding: 10px;
+    border: none;
+    background: #e1a8f0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    display: block;
+    width: 50%;
+    margin-left: 23%;
+}
+
+#edit-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
